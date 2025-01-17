@@ -4,7 +4,8 @@
  */
 package DiaDaSemana;
 
-import java.util.Scanner;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
 
 /**
  *
@@ -17,32 +18,33 @@ public class DiaDaSemanaCondicoes {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Scanner s = new Scanner(System.in);
+        LocalDate dataAtual = LocalDate.now();
+        
+        DayOfWeek diaDaSemana = dataAtual.getDayOfWeek();
       
-        System.out.println("Qaul o dia na semana em Numero?");
-        int dia = s.nextInt();
-        //switch so serve para numeros Inteiros
-        switch (dia) {
-            case 1:
-                System.out.println("Segunda-feira");
+        System.out.println("O dia da semana atual com base na data do dispositivo: ");
+        
+        switch (diaDaSemana) {
+            case MONDAY:
+                System.out.println("Hoje é segunda-feira");
                 break;
-            case 2:
-                System.out.println("Terça-feira");
+            case TUESDAY:
+                System.out.println("Hoje é terça-feira");
                 break;
-            case 3:
-                System.out.println("Quarta-feira");
+            case WEDNESDAY:
+                System.out.println("Hoje é quarta-feira");
                 break;
-            case 4:
-                System.out.println("Quinta-feira");
+            case THURSDAY:
+                System.out.println("Hoje é quinta-feira");
                 break;
-            case 5:
-                System.out.println("Sexta-feira");
+            case FRIDAY:
+                System.out.println("Hoje é sexta-feira");
                 break;
-            case 6:
-                System.out.println("Sábado");
+            case SATURDAY:
+                System.out.println("Hoje é Sábado");
                 break;
-            case 7:
-                System.out.println("Domingo");
+            case SUNDAY:
+                System.out.println("Hoje é Domingo");
                 break;
             default:
                 System.out.println("Dia inválido");
